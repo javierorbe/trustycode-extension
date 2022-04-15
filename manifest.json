@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "TrustyCode",
+  "version": "1.0.0",
+  "description": "TrustyCode extension",
+  "author": "TrustyCode",
+  "permissions": [
+    "storage",
+    "scripting",
+    "idle"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "TrustyCode"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["./js/jsrsasign-all-min.js","content-script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "externally_connectable": {
+    "matches": ["*://localhost/*"]
+  }
+}
