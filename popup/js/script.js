@@ -3,7 +3,7 @@ document.getElementById('save-btn').addEventListener('click', function(e) {
   const certificateFiles = document.getElementById('certificate-file').files;
 
   if (privateKeyFiles.length === 0 || certificateFiles.length === 0) {
-    alert('Please select a private key and certificate.');
+    alert('Select a certificate and its private key.');
     return;
   }
 

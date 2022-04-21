@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/Quicksand-SemiBold.woff2');
+}
+
+:root {
+  --material-black: #212121;
+}
+
+.tc-title {
+  text-align: center;
+  color: var(--material-black);
+  font-family: Quicksand, sans-serif;
+}
